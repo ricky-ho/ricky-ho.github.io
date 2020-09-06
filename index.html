@@ -11,32 +11,37 @@
 
 <body>
 
-<nav id="navbar">
-    <ul>
-        <li><a href="#about" class="no-decoration">About</a></li>
-        <li><a href="#projects" class="no-decoration">Projects</a></li>
-        <li><a href="#contact" class="no-decoration">Contact</a></li>
-    </ul>
-</nav>
-
 <main>
-    <section id="welcome-section" class="main-section">
+    <section id="welcome-section" class="main-section flex">
         <div id="header">
             <h1>Hi, I'm Ricky.</h1>
             <p>Aspiring web developer. Take a look at my 
                 <a href="resume.pdf" class="no-decoration" target="_blank">resume</a>
             </p>
         </div>
-    
     </section>
 
+    <nav id="navbar" class="flex">
+        <ul>
+            <li><a href="#about" class="no-decoration">About</a></li>
+            <li><a href="#projects" class="no-decoration">Projects</a></li>
+            <li><a href="#contact" class="no-decoration">Contact</a></li>
+        </ul>
+    </nav>
+
     <section id="about" class="main-section flex">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales felis eros, et tincidunt lorem ullamcorper id. Nam nisi quam, scelerisque ac porttitor in, congue eu mi. Sed nec tempor risus. Duis condimentum urna nec ligula elementum fringilla. Aliquam viverra turpis nec justo congue, at imperdiet massa mattis. Duis porttitor sapien nibh, a pellentesque lorem blandit eu. Sed tristique nibh a placerat ultricies. Mauris condimentum, nisi non ornare rhoncus, ex odio gravida metus, id auctor metus leo ut ex. Suspendisse lectus dui, elementum quis fringilla sit amet, consectetur et leo. Aliquam faucibus consectetur vulputate. Suspendisse maximus nulla congue libero hendrerit, in varius neque vehicula. Fusce id risus a turpis dignissim vestibulum. In cursus, augue a ornare consequat, tellus mauris facilisis nisi, in lacinia nibh sapien luctus orci. Etiam egestas ex quis urna commodo, eget rhoncus magna fringilla.</p>
+        <div class="header2">
+            <h2>About</h2>
+        </div>
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales felis eros, et tincidunt lorem ullamcorper id. Nam nisi quam, scelerisque ac porttitor in, congue eu mi. Sed nec tempor risus. Duis condimentum urna nec ligula elementum fringilla. Aliquam viverra turpis nec justo congue, at imperdiet massa mattis. Duis porttitor sapien nibh, a pellentesque lorem blandit eu. Sed tristique nibh a placerat ultricies. Mauris condimentum, nisi non ornare rhoncus, ex odio gravida metus, id auctor metus leo ut ex. Suspendisse lectus dui, elementum quis fringilla sit amet, consectetur et leo. Aliquam faucibus consectetur vulputate. Suspendisse maximus nulla congue libero hendrerit, in varius neque vehicula. Fusce id risus a turpis dignissim vestibulum. In cursus, augue a ornare consequat, tellus mauris facilisis nisi, in lacinia nibh sapien luctus orci. Etiam egestas ex quis urna commodo, eget rhoncus magna fringilla.</p>
+        </div>
     </section>
 
     <section id="projects" class="main-section flex">
-        <h2>My Projects</h2>
+        <div class="header2">
+            <h2>My Projects</h2>
+        </div>
         <div class="project-wrapper">
             <div class="project-tile"></div>
             <div class="project-tile"></div>
@@ -46,14 +51,20 @@
     </section>
 
     <section id="contact" class="main-section flex">
-        <h2>Contact</h2>
-        <p>Please use the form below or send me an email at <strong>horicky2016@gmail.com</strong></p>
-        <form id="contact-form" class="flex" >
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Enter email" required>
-            <textarea type="text" name="message" placeholder="Enter message" rows="3"></textarea>
-            <input id="submit" type="submit" value="SUBMIT">
-        </form>
+        <div class="header2">
+            <h2>Contact</h2>
+        </div>
+        <div class="text">
+            <p>Please use the form below or send me an email at <strong>horicky2016@gmail.com</strong></p>
+        </div>
+        <div class="flex">
+            <form id="contact-form" class="flex" >
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Enter email" required>
+                <textarea type="text" name="message" placeholder="Enter message" rows="3"></textarea>
+                <input id="submit" type="submit" value="SUBMIT">
+            </form>
+        </div>
     </section>
 
     <section id="footer">

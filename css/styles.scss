@@ -6,33 +6,46 @@ html, body {
     display: block;
     margin: 0;
     font-family: 'Metrophobic', sans-serif;
-    color: #ffffff;
-    background-color: $main-color;
+    color: $second-color;
+    background: $main-color;
+}
+
+.main-section {
+    height: auto;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.header2 {
+    font-size: 2rem;
+    padding: 0 50px;
+    border-bottom: 3px solid $third-color;
+    text-transform: uppercase;
 }
 
 #navbar {
-    position: fixed;
-    left: 0;
+    position: sticky;
     top: 0;
     width: 100%;
-    height: 63px;
+    height: 60px;
+    text-align: left;
     z-index: 1;
-    background-color: $third-color;
+    background: $third-color;
 
     ul {
         list-style: none;
-        text-align: right;
+        padding-bottom: 4px;
 
         li {
             display: inline;
-            margin: 15px;
-            padding: 3px 5px 7px 5px;
+            margin: 0 25px;
+            padding: 2px 0 5px 0;
             font-size: 1.5rem;
             text-align: center;
 
             a {
                 color: $second-color;
-                position: relative;
+                text-transform: uppercase;
                 transition: 0.5s;
             }
         }
@@ -48,28 +61,15 @@ html, body {
     }
 }
 
-.main-section {
-    height: 100vh;
-    width: 100%;
-    padding-top: 65px;
-
-    h2 {
-        font-size: 2.5rem;
-        padding: 0 50px 5px;
-        margin: 0 auto;
-        border-bottom: 2px solid $third-color;
-    }
-}
-
 #welcome-section {
     position: relative;
-    top: 70px;
+    height: 100vh;
 
     #header {
         position: absolute;
-        top: 100px;
-        left: 100px;
-        font-size: 7vh;
+        top: 30vh;
+        left: 10vw;
+        font-size: 32px;
 
         p {
             font-size: 4vh;
@@ -78,9 +78,9 @@ html, body {
 }
 
 #about {
-    margin-top: 70px;
-    padding-bottom: 200px;
-    background: linear-gradient(180deg, rgba(22, 23, 29, 0.5), rgba(255,255,255,0.3));
+    text-align: center;
+    color: $main-color;
+    background: $second-color;
 
     p {
         font-size: 1.3rem;
@@ -89,9 +89,7 @@ html, body {
 }
 
 #projects {
-    height: auto;
-    padding-bottom: 200px;
-    background-color: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.6);
 
     .project-wrapper {
         display: flex;
@@ -101,31 +99,29 @@ html, body {
         align-content: center;
         border-radius: 25px;
         margin: 40px 100px;
+    }
 
-        .project-tile {
-            background-color: white;
-            margin: 50px;
-            width: 400px;
-            min-width: 240px;
-            height: 400px;
-            border-radius: 25px;
-            box-shadow: 0 4px 10px 0px rgba(0,0,0,0.2);
-        }
+    .project-tile {
+        background: $second-color;
+        margin: 50px;
+        width: 350px;
+        min-width: 240px;
+        height: 400px;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px 0px rgba(0,0,0,0.2);
+    }
 
-        .project-tile:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.25)
-        }
+    .project-tile:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.25)
     }
 }
 
 #contact {
-
+    
     p {
-        position: relative;
-        top: 50px;
-        margin: 0 auto;
+        margin: 40px auto;
         text-align: center;
         font-size: 1.3rem;
 
@@ -136,38 +132,38 @@ html, body {
     }
 
     #contact-form {
-        position: relative;
-        top: 100px;
         margin: 0 auto;
-        width: 50%;
+        width: 400px;
         place-content: center;
         justify-content: center;
 
         input, textarea {
             font-family: 'Metrophobic', sans-serif;
-            font-size: 1.5rem;
-            margin: 30px 0;
-            padding: 5px 0;
+            font-size: 1.3rem;
+            margin: 25px 0;
+            width: 100%;
+            padding: 5px 10px;
             border: none;
+            border: 2px solid $third-color;
+            color: $second-color;
+            background: rgba(255,255,255,0.6);
         }
 
         #submit {
-            position: absolute;
-            top: 320px;
-            right: 0;
             font-size: 15px;
             padding: 8px;
+            margin: 10px 0 100px 0;
             width: 100px;
             border-radius: 5px;
             color: $main-color;
-            background-color: $second-color;
+            background: $second-color;
             transition: 0.3s;
         }
 
         #submit:hover {
             cursor: pointer;
             color: $second-color;
-            background-color: $third-color;
+            background: $third-color;
         }
     }
 }
@@ -175,7 +171,7 @@ html, body {
 #footer {
     padding-top: 20px;
     height: 90px;
-    background-color: $third-color;
+    background: $third-color;
 
     p {
         padding-top: 5px;
@@ -194,9 +190,15 @@ html, body {
 
 
 
+::placeholder {
+    color: $second-color;
+}
+
 .flex {
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .no-decoration {
@@ -218,12 +220,12 @@ html, body {
 }
 
 .fa-linkedin {
-    background-color: #0e76a8;
+    background: #0e76a8;
     color: #ffffff;
 }
 
 .fa-github {
-    background-color: #000000;
+    background: #000000;
     color: #ffffff;
 }
 
